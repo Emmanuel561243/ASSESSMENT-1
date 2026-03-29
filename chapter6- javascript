@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AED Petrol Calculator - UAE Version - FULLY INLINE -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕌 AED Petrol Calculator</title>
+    <style>
+        /* Global Reset & Base Styles */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#1e3c72 0%,#2a5298 50%,#00d2d3 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+        
+        /* Main Calculator Container */
+        .calculator{background:rgba(255,255,255,0.95);backdrop-filter:blur(25px);border-radius:30px;padding:45px;box-shadow:0 30px 60px rgba(0,0,0,0.3);max-width:480px;width:100%;text-align:center;position:relative;overflow:hidden}
+        .calculator::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#00d2d3,#ff6b6b,#ffd93d)}
+        
+        /* Title Styling */
+        .title{font-size:2.8rem;margin-bottom:10px;color:#1e3c72;font-weight:800;text-shadow:2px 2px 4px rgba(0,0,0,0.1)}
+        .subtitle{color:#666;margin-bottom:40px;font-size:1.2rem;font-weight:500}
+        .currency{display:inline-block;background:#ffd93d;color:#1e3c72;padding:8px 20px;border-radius:25px;font-weight:700;font-size:1.1rem;margin-bottom:30px;box-shadow:0 5px 15px rgba(255,217,61,0.4)}
+        
+        /* Input Groups */
+        .input-group{margin-bottom:30px;text-align:left}
+        .input-group label{display:block;margin-bottom:10px;color:#1e3c72;font-weight:700;font-size:1.1rem}
+        .input-field{width:100%;padding:18px 25px;border:3px solid #e8f4fd;border-radius:18px;font-size:1.3rem;transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);background:#fff;font-weight:600;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+        .input-field:focus{outline:none;border-color:#00d2d3;transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,210,211,0.25)}
+        
+        /* Calculate Button */
+        .calc-btn{background:linear-gradient(135deg,#ff6b6b 0%,#ee5a52 100%);color:white;border:none;padding:22px 50px;font-size:1.4rem;font-weight:900;border-radius:20px;cursor:pointer;transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);box-shadow:0 15px 35px rgba(255,107,107,0.4);width:100%;margin:30px 0;text-transform:uppercase;letter-spacing:2px;position:relative;overflow:hidden}
+        .calc-btn:hover{transform:translateY(-6px);box-shadow:0 25px 50px rgba(255,107,107,0.5)}
+        .calc-btn:active{transform:translateY(-3px)}
+        
+        /* Result Display */
+        .result{background:linear-gradient(135deg,#00d2d3 0%,#38ef7d 100%);color:#fff;padding:30px;border-radius:20px;font-size:2.5rem;font-weight:900;margin-top:20px;min-height:90px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 45px rgba(0,210,211,0.4);text-shadow:2px 2px 4px rgba(0,0,0,0.2);letter-spacing:2px}
+        .result.hidden{opacity:0.6;transform:scale(0.95)}
+        
+        /* UAE Theme Elements */
+        .uae-badge{position:absolute;top:20px;right:20px;background:rgba(0,0,0,0.7);color:#ffd93d;padding:10px 15px;border-radius:20px;font-size:0.9rem;font-weight:700}
+        
+        /* Responsive Design */
+        @media(max-width:500px){.calculator{padding:35px 25px}.title{font-size:2.2rem}}
+        @media(max-width:400px){.input-field{font-size:1.1rem;padding:15px 20px}}
+    </style>
+</head>
+<body>
+    <!-- UAE Petrol Calculator -->
+    <div class="calculator">
+        <!-- UAE Badge -->
+        <div class="uae-badge">🇦🇪 AED</div>
+        
+        <!-- Title & Currency -->
+        <h1 class="title">⛽ Petrol Calculator</h1>
+        <div class="currency">United Arab Emirates Dirham (AED)</div>
+        <p class="subtitle">Calculate your fuel cost instantly</p>
+        
+        <!-- Price per litre input -->
+        <div class="input-group">
+            <label for="aedPrice">Petrol Price per Litre (AED)</label>
+            <input type="number" id="aedPrice" class="input-field" value="2.99" step="0.01" min="0" placeholder="e.g. 2.99">
+        </div>
+        
+        <!-- Litres purchased input -->
+        <div class="input-group">
+            <label for="aedLitres">Litres Purchased</label>
+            <input type="number" id="aedLitres" class="input-field" value="0" min="0" placeholder="e.g. 50">
+        </div>
+        
+        <!-- Calculate button -->
+        <button class="calc-btn" onclick="calculateAED()">
+            Calculate Total AED
+        </button>
+        
+        <!-- Result display paragraph -->
+        <div id="aedResult" class="result hidden">
+            AED 0.00
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Calculate AED petrol cost
+         * Gets values from inputs, multiplies, displays result
+         */
+        function calculateAED() {
+            // Get input values with validation
+            const pricePerLitre = parseFloat(document.getElementById('aedPrice').value) || 0;
+            const litresPurchased = parseFloat(document.getElementById('aedLitres').value) || 0;
+            
+            // Calculate total cost (2 decimal places)
+            const totalCost = (pricePerLitre * litresPurchased).toFixed(2);
+            
+            // Update result display
+            const resultElement = document.getElementById('aedResult');
+            resultElement.textContent = 'AED ' + totalCost;
+            resultElement.classList.remove('hidden');
+            
+            // Smooth scroll to result
+            resultElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        /**
+         * Enter key support - calculate on Enter press
+         */
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculateAED();
+            }
+        });
+        
+        /**
+         * Real-time calculation on input change (bonus feature)
+         */
+        document.getElementById('aedPrice').addEventListener('input', calculateAED);
+        document.getElementById('aedLitres').addEventListener('input', calculateAED);
+    </script>
+</body>
+</html>
