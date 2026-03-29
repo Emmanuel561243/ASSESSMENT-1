@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- One-Page Website - INLINE VERSION ☑️ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars ☑️ - Pixar</title>
+    <style>
+        /* Basic Reset */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:Arial,sans-serif;background-color:#f5f5f5;color:#333;line-height:1.6}
+        
+        /* Navigation */
+        .navbar{background-color:#cc0000;padding:15px;text-align:center;position:sticky;top:0;z-index:100}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .logo h1{color:white;font-size:24px;margin:0}
+        .nav-links{display:flex;list-style:none;gap:20px}
+        .nav-links a{color:white;text-decoration:none;font-weight:bold;font-size:18px;transition:color 0.3s}
+        .nav-links a:hover{color:yellow}
+        
+        /* Hero Section */
+        .hero{background-color:#1a1a1a;color:white;text-align:center;padding:80px 20px;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-color:#cc0000;clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);z-index:1}
+        .hero::after{content:'';position:absolute;width:100%;height:15px;background:yellow;opacity:0.8;top:20%;z-index:2}
+        .hero h2{font-size:3rem;margin-bottom:1rem;position:relative;z-index:3;text-shadow:3px 3px 0 #cc0000}
+        .hero p{font-size:1.2rem;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;position:relative;z-index:3}
+        .cta-button{display:inline-block;background:yellow;color:black;padding:15px 30px;text-decoration:none;font-weight:bold;border-radius:8px;font-size:1.1rem;transition:all 0.3s;position:relative;z-index:3;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
+        .cta-button:hover{background:white;transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,0.4)}
+        
+        /* Main Content */
+        .main-content{max-width:1200px;margin:0 auto;padding:40px 20px}
+        
+        /* Sections */
+        .section{background:white;padding:40px;margin-bottom:40px;border-radius:12px;border-left:6px solid #cc0000;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+        .section-title{color:#cc0000;font-size:2.2rem;margin-bottom:25px;text-align:center}
+        .section-text{font-size:1.1rem;line-height:1.7;margin-bottom:30px}
+        
+        /* Grids */
+        .info-grid,.cast-grid,.character-grid,.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:30px}
+        
+        /* Cards */
+        .info-card,.cast-member,.character-card{padding:25px;background:#f9f9f9;border-radius:10px;text-align:center;border:2px solid #f0f0f0;transition:transform 0.3s,box-shadow 0.3s}
+        .info-card:hover,.cast-member:hover,.character-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,0.15)}
+        .info-card h3,.cast-member h3,.character-card h3{color:#cc0000;margin-bottom:10px;font-size:1.3rem}
+        
+        /* Reviews */
+        .review{background:#f9f9f9;padding:25px;margin-bottom:20px;border-radius:10px;border-left:5px solid #cc0000;font-style:italic;position:relative}
+        .review::before{content:'"';font-size:4rem;color:#cc0000;position:absolute;top:-10px;left:15px;opacity:0.3}
+        .review cite{display:block;color:#cc0000;font-weight:bold;margin-top:15px;font-size:0.95rem}
+        
+        /* Footer */
+        .footer{text-align:center;padding:30px;background:#cc0000;color:white;font-weight:bold}
+        
+        /* Responsive */
+        @media(max-width:768px){
+            .nav-container{flex-direction:column;gap:15px}
+            .hero{padding:60px 20px}
+            .hero h2{font-size:2rem}
+            .main-content{padding:20px 15px}
+            .section{padding:25px}
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🏁 Cars</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#cast" class="nav-link">Voice Cast</a></li>
+                <li><a href="#characters" class="nav-link">Characters</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Life is About the Journey</h2>
+            <p>A hotshot rookie race car discovers that life is about the friends you make along the way.</p>
+            <a href="https://movies.disney.com/cars" target="_blank" class="cta-button">
+                Watch on Disney+ →
+            </a>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Overview -->
+        <section id="overview" class="section">
+            <h2 class="section-title">🏎️ Movie Overview</h2>
+            <p class="section-text">
+                Lightning McQueen is a hotshot rookie race car on the verge of winning 
+                his first Piston Cup Championship. But a wrong turn takes him to Radiator 
+                Springs where he learns life is about more than just winning.
+            </p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Release Date</h3>
+                    <p>June 9, 2006</p>
+                </div>
+                <div class="info-card">
+                    <h3>Director</h3>
+                    <p>John Lasseter</p>
+                </div>
+                <div class="info-card">
+                    <h3>Studio</h3>
+                    <p>Pixar Animation</p>
+                </div>
+                <div class="info-card">
+                    <h3>Box Office</h3>
+                    <p>$468M</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cast -->
+        <section id="cast" class="section">
+            <h2 class="section-title">🎙️ Voice Cast</h2>
+            <div class="cast-grid">
+                <div class="cast-member">
+                    <h3>Owen Wilson</h3>
+                    <p>Lightning McQueen</p>
+                </div>
+                <div class="cast-member">
+                    <h3>Paul Newman</h3>
+                    <p>Doc Hudson</p>
+                </div>
+                <div class="cast-member">
+                    <h3>Bonnie Hunt</h3>
+                    <p>Sally Carrera</p>
+                </div>
+                <div class="cast-member">
+                    <h3>Larry the Cable Guy</h3>
+                    <p>Mater</p>
+                </div>
+            </div>
+            <p class="section-text">
+                <strong>More voices:</strong> Cheech Marin, Tony Shalhoub, Jenifer Lewis & more!
+            </p>
+        </section>
+
+        <!-- Characters -->
+        <section id="characters" class="section">
+            <h2 class="section-title">🚗 Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <h3>Lightning McQueen</h3>
+                    <p>Red rookie race car #95. Arrogant but learns humility.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Doc Hudson</h3>
+                    <p>Retired judge & former Piston Cup champion.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Sally Carrera</h3>
+                    <p>Porsche attorney restoring Radiator Springs.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Mater</h3>
+                    <p>Rusty tow truck, Lightning's best friend.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section id="reviews" class="section">
+            <h2 class="section-title">⭐ Reviews & Awards</h2>
+            <div class="reviews-grid">
+                <blockquote class="review">
+                    "Pixar at its finest. Heartwarming family classic!" 
+                    <cite>— Rotten Tomatoes (75% Fresh)</cite>
+                </blockquote>
+                <blockquote class="review">
+                    "Perfect for all ages. 8.1/10" 
+                    <cite>— IMDb Rating</cite>
+                </blockquote>
+                <blockquote class="review">
+                    "Won 2 Academy Awards!" 
+                    <cite>— Best Animated Feature + Original Song</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Cars Fan Site | 🏁 Pixar Animation Studios 🏁</p>
+    </footer>
+</body>
+</html>
+
