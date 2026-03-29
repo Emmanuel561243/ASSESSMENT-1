@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Fest</title>
+
+<style>
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page font */
+body {
+    font-family: Arial;
+    color: #000000;
+}
+
+/* Center content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #17072b;
+    color: #FFFFFF;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: Tahoma;
+    font-weight: 700;
+}
+
+/* Nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome section */
+.welcome {
+    background: #172d67;
+    color: #FFFFFF;
+    padding: 60px 0;
+}
+
+.welcome h2 {
+    font-family: Tahoma;
+    margin-bottom: 15px;
+}
+
+/* Line up */
+.lineup {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.lineup h2 {
+    font-family: Tahoma;
+    margin-bottom: 10px;
+}
+
+/* Images layout */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.images img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    background: #8c15e9;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Code Fest</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Workshops</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="welcome">
+    <div class="container">
+        <article>
+            <h2>Welcome to Code Fest</h2>
+            <p>
+                Code Fest is a celebration of programming, creativity, and digital innovation. 
+                This event brings together developers, designers, and students to explore coding, 
+                build projects, and collaborate on new ideas.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="lineup">
+    <div class="container">
+        <article>
+            <h2>Line Up</h2>
+            <p>Explore coding workshops, live demos, and creative tech projects.</p>
+
+            <div class="images">
+                <!-- Coding image 1 -->
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="Code on screen">
+
+                <!-- Coding image 2 -->
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Developer coding">
+            </div>
+
+        </article>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2024 Code Fest</p>
+</footer>
+
+</body>
+</html>
