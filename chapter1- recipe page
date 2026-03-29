@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Recipe Page - Mandatory Exercise ☑️ + Bonus Features -->
+    <!-- Features: Creative styling, 12+ HTML tags, 10+ CSS properties -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Adobo ☑️</title>
+    <style>
+        /* Creative but simple professional styling - 10+ CSS properties */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            line-height: 1.6;
+            background-color: #f8f4f0;
+            color: #2c1810;
+        }
+        
+        h1 {
+            /* h1 - Main recipe title */
+            color: #8b4513;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            /* h2 - Section headers */
+            color: #b5651d;
+            border-bottom: 2px solid #d2691e;
+            padding-bottom: 5px;
+            margin: 30px 0 15px 0;
+        }
+        
+        h3 {
+            /* h3 - Subheader for bonus info */
+            color: #a0522d;
+            margin-top: 25px;
+        }
+        
+        p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+        
+        .highlight {
+            background-color: #fff8dc;
+            padding: 20px;
+            border-left: 5px solid #daa520;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- 12+ HTML tags used: html, head, body, title, style, h1, h2, h3, p, ul, ol, li, div, code, strong, em -->
+    
+    <!-- h1 tag for recipe name - REQUIRED -->
+    <h1>🍗 Chicken Adobo</h1>
+    
+    <!-- p tag for recipe description - REQUIRED -->
+    <p>
+        <strong>Chicken Adobo</strong> is the iconic Filipino national dish. Tender 
+        chicken braised in a savory-tangy sauce of soy sauce, vinegar, garlic, and 
+        spices. Perfect with rice! <em>Ready in 1 hour.</em>
+    </p>
+
+    <!-- Ingredients section - REQUIRED h2 + ul -->
+    <h2>🥘 Ingredients</h2>
+    <!-- Unordered list for ingredients - REQUIRED -->
+    <ul>
+        <li>1kg chicken thighs</li>
+        <li>½ cup soy sauce</li>
+        <li>½ cup vinegar</li>
+        <li>1 head garlic (chopped)</li>
+        <li>1 tsp black peppercorns</li>
+        <li>3 bay leaves</li>
+        <li>1 cup water</li>
+        <li>2 tbsp oil</li>
+    </ul>
+
+    <!-- Method section - REQUIRED h2 + ol -->
+    <h2>🔥 Method</h2>
+    <!-- Ordered list for steps - REQUIRED -->
+    <ol>
+        <li>Brown chicken in hot oil (5 mins)</li>
+        <li>Add garlic, cook 1 min</li>
+        <li>Pour soy sauce + vinegar + water + spices</li>
+        <li>Simmer covered 40 mins</li>
+        <li>Uncover, thicken sauce 5 mins</li>
+        <li>Serve hot with rice</li>
+    </ol>
+
+    <!-- BONUS: Creative styling highlight box with code example -->
+    <div class="highlight">
+        <h3>💡 Pro Tip</h3>
+        <p>
+            Don't stir during first 20 minutes! Let vinegar "cook off" properly. 
+            Use <code>low heat</code> for tender chicken.
+        </p>
+    </div>
+
+</body>
+</html>
